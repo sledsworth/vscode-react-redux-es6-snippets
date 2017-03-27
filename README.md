@@ -7,13 +7,13 @@ This extension for Visual Studio Code adds snippets for React and Redux using ES
 ## Usage
 Type part of a snippet, press `enter`, and the snippet unfolds.
 
-| Snippet Shortcut | Description                                             |
-|:----------------:|:-------------------------------------------------------:|
-| **rpc**          | React Presentational(Dumb) Component Template           |
-| **rcc**          | React Container(Smart) Component Template               |
-| **rrcc**         | React-Redux Container(Smart) Component Template         |
-| **imp**          | ES6 Import with Optional Alias                          |
-| **nimp**         | ES6 Named Import                                        |
+| Shortcut | Description                                             |
+|---------:|---------------------------------------------------------|
+| **rpc**  | React Presentational(Dumb) Component Template           |
+| **rcc**  | React Container(Smart) Component Template               |
+| **rrcc** | React-Redux Container(Smart) Component Template         |
+| **imp**  | ES6 Import with Optional Alias                          |
+| **nimp** | ES6 Named Import                                        |
 
 
 Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (OSX) to activate snippets from within the editor.
