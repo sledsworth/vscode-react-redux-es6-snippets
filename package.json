@@ -3,7 +3,7 @@
     "publisher": "Steve Ledsworth",
     "displayName": "React Redux ES6 Snippets",
     "description": "React Redux ES6 Snippets",
-    "icon": "images/react-redux.png",
+    "icon": "images/icon.svg",
 	"galleryBanner": {
 		"color": "#0273D4",
 		"theme": "dark"
