@@ -2,21 +2,24 @@
 
 This extension for Visual Studio Code adds snippets for React and Redux using ES6 for JavaScript.
 
-![Use Extension](#)
-
 ## Usage
 Type part of a snippet, press `enter`, and the snippet unfolds.
 
 | Shortcut | Description                                             |
 |---------:|---------------------------------------------------------|
 | **rpc**  | React Presentational(Dumb) Component Template           |
-| **rcc**  | React Container(Smart) Component Template               |
+| **rcc**  | React Only Container(Smart) Component Template          |
+| **rcr**  | React Contructor								         |
+| **rcm**  | React Lifecycle Hook: Component Did Mount		         |							
+| **rcp**  | React Lifecycle Hook:  Component Will Receive Props	 |							
+| **rcu**  | React Lifecycle Hook: Component Did Unmount		     |							
 | **rrcc** | React-Redux Container(Smart) Component Template         |
 | **imp**  | ES6 Import with Optional Alias                          |
 | **nimp** | ES6 Named Import                                        |
+| **rimp** | ES6 React Import                                        |
 
 
-Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (OSX) to activate snippets from within the editor.
+Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (macOS) to activate snippets from within the editor.
 
 ## Installation
 
@@ -26,5 +29,3 @@ Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (OSX) to a
 4. Select `Install Extension`
 5. Choose the extension `React Redux ES6 Snippets`
 6. Reload VS Code
-
-![Install Extension](#)
