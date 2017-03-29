@@ -6,4 +6,4 @@
 - added some more react snippets for lifecycle hooks
 
 ## Version 0.1.2
-- 
+- fixed an error in README.md for macOS snippet shortcut

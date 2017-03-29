@@ -19,7 +19,7 @@ Type part of a snippet, press `enter`, and the snippet unfolds.
 | **rimp** | ES6 React Import                                        |
 
 
-Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (macOS) to activate snippets from within the editor.
+Alternatively, press `Ctrl`+`Space` to activate snippets from within the editor.
 
 ## Installation
 
