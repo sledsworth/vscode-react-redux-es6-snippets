@@ -1,7 +1,7 @@
 {
-	"Redux Action Definition": {
-		"prefix": "reduxActionExport",
-		"body": "export const ${actionType} = \"${actionType}\""
+	"Redux Action Type Definition": {
+		"prefix": "actionType",
+		"body": "export const ${actionType} = '${actionType}'"
 	},
 	"ES6 React Import": {
 		"prefix": "reactImport",
@@ -108,36 +108,36 @@
 			"",
 			"",
 			"class ${ComponentName} extends React.Component {",
-			"	${constructor(props, context) {",
+			"	${1:constructor(props, context) {",
 			"		super(props, context);",
-			"		${1:}",
-			"	}}",
-			"",
-			"	${componentDidMount() {",
 			"		${2:}",
 			"	}}",
 			"",
-			"	${componentWillReceiveProps() {",
-			"		${3:}",
+			"	${3:componentDidMount() {",
+			"		${4:}",
 			"	}}",
 			"",
-			"	${componentWillUnmount() {",
-			"		${4:}",
+			"	${5:componentWillReceiveProps() {",
+			"		${6:}",
+			"	}}",
+			"",
+			"	${7:componentWillUnmount() {",
+			"		${8:}",
 			"	}}",
 			"",
 			"	render() {",
 			"		return (",
-			"			${5:}",
+			"			${9:}",
 			"		);",
 			"	}",
 			"}",
 			"",
 			"${ComponentName}.defaultProps = {",
-			"	${6:}",
+			"	${10:}",
 			"};",
 			"",
 			"${ComponentName}.propTypes = {",
-			"	${7:}",
+			"	${11:}",
 			"};",
 			"",
 			"export default ${ComponentName};",
@@ -149,14 +149,14 @@
 		"body": [	
 			"	constructor(props, context) {",
 			"		super(props, context);",
-			"		${}",
+			"		$1",
 			"	}"
 		]
 	},
 	"React Set Component State": {
 		"prefix": "setState",
 		"body": [	
-			"this.setState(${});"
+			"this.setState($1);"
 		],
 		"description": "Performs a shallow merge of nextState into current state. This is the primary method you use to trigger UI updates from event handlers and server request callbacks."
 	},
@@ -164,7 +164,7 @@
 		"prefix": "didMount",
 		"body": [	
 			"	componentDidMount() {",
-			"		${}",
+			"		$1",
 			"	}"
 		],
 		"description": "Requires DOM nodes? Async network calls? Those go here."
@@ -173,7 +173,7 @@
 		"prefix": "willMount",
 		"body": [	
 			"	componentWillMount() {",
-			"		${}",
+			"		$1",
 			"	}"
 		],
 		"description": "Invoked immediately before mounting occurs. It is called before render(), therefore setting state in this method will not trigger a re-rendering. Avoid introducing any side-effects or subscriptions in this method."
@@ -182,7 +182,7 @@
 		"prefix": "willReceiveProps",
 		"body": [	
 			"	componentWillReceiveProps() {",
-			"		${}",
+			"		$1",
 			"	}"
 		],
 		"description": "Need to update state based on prop changes? Do that here!"
@@ -191,10 +191,42 @@
 		"prefix": "willUnmount",
 		"body": [	
 			"	componentWillUnmount() {",
-			"		${}",
+			"		$1",
 			"	}"
 		],
 		"description": "Need to clean something up before this component is destroyed? Goes here."
+	},
+	"Redux Reducer Template": {
+		"prefix": "reducer",
+		"body": [	
+			"import * as actionTypes from '${1:pathToActionTypes}';",
+			"",
+			"const ${2:reducerName}InitialState = {$3};",
+			"",
+			"const ${2:reducerName} = (state = ${2:reducerName}InitialState, action) => {",
+			"	switch (action.type) {",
+			"		case ${3:ACTION_TYPE_1}:",
+			"			return state;",
+			"		default:",
+			"			return state;",
+			"	}",
+			"}",
+			"",
+			"default export ${2:reducerName};",
+			""
+		],
+		"description": "Redux reducer template"
+	},
+	"Redux Actions Template": {
+		"prefix": "actions",
+		"body": [	
+			"import * as actionTypes from '${1:pathToActionTypes}';",
+			"",
+			"export const ${2:actionName} = ($3) => {",
+			"	return { type: actionTypes.${4:actionType} };",
+			"};",
+			""
+		],
+		"description": "Redux actions template"
 	}
-
 }

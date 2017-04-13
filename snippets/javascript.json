@@ -1,7 +1,7 @@
 {
-	"Redux Action Definition": {
-		"prefix": "reduxActionExport",
-		"body": "export const ${actionType} = \"${actionType}\""
+	"Redux Action Type Definition": {
+		"prefix": "actionType",
+		"body": "export const ${actionType} = '${actionType}'"
 	},
 	"ES6 React Import": {
 		"prefix": "reactImport",
@@ -195,6 +195,38 @@
 			"	}"
 		],
 		"description": "Need to clean something up before this component is destroyed? Goes here."
+	},
+	"Redux Reducer Template": {
+		"prefix": "reducer",
+		"body": [	
+			"import * as actionTypes from '${1:pathToActionTypes}';",
+			"",
+			"const ${2:reducerName}InitialState = {$3};",
+			"",
+			"const ${2:reducerName} = (state = ${2:reducerName}InitialState, action) => {",
+			"	switch (action.type) {",
+			"		case ${3:ACTION_TYPE_1}:",
+			"			return state;",
+			"		default:",
+			"			return state;",
+			"	}",
+			"}",
+			"",
+			"default export ${2:reducerName};",
+			""
+		],
+		"description": "Redux reducer template"
+	},
+	"Redux Actions Template": {
+		"prefix": "actions",
+		"body": [	
+			"import * as actionTypes from '${1:pathToActionTypes}';",
+			"",
+			"export const ${2:actionName} = ($3) => {",
+			"	return { type: actionTypes.${4:actionType} };",
+			"};",
+			""
+		],
+		"description": "Redux actions template"
 	}
-
 }
