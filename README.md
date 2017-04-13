@@ -6,17 +6,21 @@ This extension for Visual Studio Code adds snippets for React and Redux using ES
 Type part of a snippet, press `enter`, and the snippet unfolds.
 
 | Shortcut | Description                                             |
-|---------:|---------------------------------------------------------|
-| **rpc**  | React Presentational(Dumb) Component Template           |
-| **rcc**  | React Only Container(Smart) Component Template          |
-| **rcr**  | React Contructor								         |
-| **rcm**  | React Lifecycle Hook: Component Did Mount		         |							
-| **rcp**  | React Lifecycle Hook:  Component Will Receive Props	 |							
-| **rcu**  | React Lifecycle Hook: Component Did Unmount		     |							
-| **rrcc** | React-Redux Container(Smart) Component Template         |
-| **imp**  | ES6 Import with Optional Alias                          |
-| **nimp** | ES6 Named Import                                        |
-| **rimp** | ES6 React Import                                        |
+|--------- |---------------------------------------------------------|
+| **dumbComponent**  | React Presentational(Dumb) Component Template           |
+| **smartComponent**  | React Only Container(Smart) Component Template          |
+| **constructor**  | React Contructor								         |
+| **setState**  | React Set Component State								         |
+| **willMount**  | React Lifecycle Hook: Component Will Mount		         |							
+| **didMount**  | React Lifecycle Hook: Component Did Mount		         |							
+| **willReceiveProps**  | React Lifecycle Hook:  Component Will Receive Props	 |							
+| **willUnmount**  | React Lifecycle Hook: Component Did Unmount		     |							
+| **reduxComponent** | React-Redux Container(Smart) Component Template         |
+| **reduxActionExport** | Redux Action Export
+| **import**  | ES6 Default Import                        |
+| **aliasedImport**  | ES6 Import with Alias                          |
+| **namedImport** | ES6 Named Import                                        |
+| **reactImport** | ES6 React and PropTypes Import                                        |
 
 
 Alternatively, press `Ctrl`+`Space` to activate snippets from within the editor.

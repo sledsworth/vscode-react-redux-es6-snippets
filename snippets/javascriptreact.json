@@ -1,19 +1,23 @@
 {
 	"Redux Action Definition": {
-		"prefix": "action",
-		"body": "export const ${action type} = \"${action type}\""
+		"prefix": "reduxActionExport",
+		"body": "export const ${actionType} = \"${actionType}\""
 	},
 	"ES6 React Import": {
 		"prefix": "reactImport",
 		"body": "import React, { PropTypes} from 'react';"
 	},
 	"ES6 Named Import": {
-		"prefix": "nameImport",
-		"body": "import ${default export} { ${named import} } from '${import path}';"
+		"prefix": "namedImport",
+		"body": "import ${defaultImport} { ${namedImport} } from '${pathToImport}';"
 	},
-	"ES6 Import": {
+	"ES6 Default Import": {
 		"prefix": "import",
-		"body": "import ${1:* as ${2:name}} from '${3:import path}';"
+		"body": "import ${defaultImport} from '${pathToImport}';"
+	},
+	"ES6 Aliased Import": {
+		"prefix": "aliasedImport",
+		"body": "import * as ${importName} from '${pathToImport}';"
 	},
 	"React Presentational(dumb) Component Template": {
 		"prefix": "dumbComponent",
@@ -24,22 +28,23 @@
 			"",
 			"	return (",
 			"		<div>",
-			"			${Markup}",
+			"			${1:}",
 			"		</div>",
 			"	);",
 			"};",
 			"",
 			"${ComponentName}.defaultProps = {",
-			"	${:// myProp: 300}",
+			"	${2:}",
 			"};",
 			"",
 			"${ComponentName}.propTypes = {",
-			"	${:// PropType Requirement}",
+			"	${3:}",
 			"};",
 			"",
-			"export default ${ComponentName};"
+			"export default ${ComponentName};",
+			""
 		],
-		"description": "React Presentational Component Template"
+		"description": "React Presentational(dumb) Component Template. Use this if the component does not need to tie into any lifecycle hooks or hold state."
 	},
 	"React-Redux Container(smart) Component Template": {
 		"prefix": "reduxComponent",
@@ -47,48 +52,41 @@
 			"import React, { PropTypes } from 'react';",
 			"import { connect } from 'react-redux';",
 			"import { bindActionCreators } from 'redux';",
-			"import * as ${actions} from '${path/to/action}/${actions}';",
+			"import * as ${actions} from '${pathToActions}';",
 			"",
 			"",
-			"export class ${ComponentName} extends React.Component {",
+			"class ${ComponentName} extends React.Component {",
 			"	${constructor(props, context) {",
 			"		super(props, context);",
-			"",
-			"		${// Initialize State}",
+			"		${1:}",
 			"	}}",
 			"",
-			"	componentDidMount() {",
-			"		${// Requires DOM nodes? Async network calls? Those go here.}",
-			"	}",
+			"	${componentDidMount() {",
+			"		${2:}",
+			"	}}",
 			"",
-			"	componentWillReceiveProps() {",
-			"		${// Need to update state based on prop changes? Do that here!}",
-			"	}",
-			"",
-			"	componentWillUnmount() {",
-			"		${// Need to clean something up before this component is destroyed? Goes here.}",
-			"	}",
+			"	${componentWillReceiveProps() {",
+			"		${3:}",
+			"	}}",
 			"",
 			"	render() {",
 			"		return (",
-			"			<div>",
-			"				${Markup}",
-			"			</div>",
+			"			${4:}",
 			"		);",
 			"	}",
 			"}",
 			"",
 			"${ComponentName}.defaultProps = {",
-			"	${:// myProp: 300}",
+			"	${5:}",
 			"};",
 			"",
 			"${ComponentName}.propTypes = {",
-			"	${:// myProp: PropTypes.string.isRequired}",
+			"	${6:}",
 			"};",
 			"",
-			"function mapStateToProps(state, ownProps) {",
+			"function mapStateToProps(rootState, ownProps) {",
 			"	return {",
-			"		state,",
+			"		${7:}",
 			"	};",
 			"}",
 			"",
@@ -101,7 +99,7 @@
 			"export default connect(mapStateToProps, mapDispatchToProps)(${ComponentName});",
 			""
 		],
-		"description": "React-Redux Container(Smart) Component Template"
+		"description": "React-Redux Container(Smart) Component Template. Use this if the component is responsible for keeping track of state and you are using redux to store that state."
 	},
 	"React Only Container(smart) Component Template": {
 		"prefix": "smartComponent",
@@ -109,40 +107,37 @@
 			"import React, { PropTypes } from 'react';",
 			"",
 			"",
-			"export class ${ComponentName} extends React.Component {",
-			"	constructor(props, context) {",
+			"class ${ComponentName} extends React.Component {",
+			"	${constructor(props, context) {",
 			"		super(props, context);",
+			"		${1:}",
+			"	}}",
 			"",
-			"		${// Initialize State}",
-			"	}",
+			"	${componentDidMount() {",
+			"		${2:}",
+			"	}}",
 			"",
-			"	componentDidMount() {",
-			"		${// Requires DOM nodes? Async network calls? Those go here.}",
-			"	}",
+			"	${componentWillReceiveProps() {",
+			"		${3:}",
+			"	}}",
 			"",
-			"	componentWillReceiveProps() {",
-			"		${// Need to update state based on prop changes? Do that here!}",
-			"	}",
-			"",
-			"	componentWillUnmount() {",
-			"		${// Need to clean something up before this component is removed from the browser DOM? Goes here.}",
-			"	}",
+			"	${componentWillUnmount() {",
+			"		${4:}",
+			"	}}",
 			"",
 			"	render() {",
 			"		return (",
-			"			<div>",
-			"				${}",
-			"			</div>",
+			"			${5:}",
 			"		);",
 			"	}",
 			"}",
 			"",
 			"${ComponentName}.defaultProps = {",
-			"	${:// myProp: 300}",
+			"	${6:}",
 			"};",
 			"",
 			"${ComponentName}.propTypes = {",
-			"	${:// myProp: PropTypes.string.isRequired}",
+			"	${7:}",
 			"};",
 			"",
 			"export default ${ComponentName};",
@@ -150,29 +145,44 @@
 		]
 	},
 	"React Constructor": {
-		"prefix": "construct",
+		"prefix": "constructor",
 		"body": [	
-			"	${constructor(props, context) {",
+			"	constructor(props, context) {",
 			"		super(props, context);",
-			"",
-			"		${// Initialize State}",
-			"	}}"
+			"		${}",
+			"	}"
 		]
+	},
+	"React Set Component State": {
+		"prefix": "setState",
+		"body": [	
+			"this.setState(${});"
+		],
+		"description": "Performs a shallow merge of nextState into current state. This is the primary method you use to trigger UI updates from event handlers and server request callbacks."
 	},
 	"React Lifecycle Hook: Component Did Mount": {
 		"prefix": "didMount",
 		"body": [	
 			"	componentDidMount() {",
-			"		${// Requires DOM nodes? Async network calls? Those go here.}",
+			"		${}",
 			"	}"
 		],
 		"description": "Requires DOM nodes? Async network calls? Those go here."
+	},
+	"React Lifecycle Hook: Component Will Mount": {
+		"prefix": "willMount",
+		"body": [	
+			"	componentWillMount() {",
+			"		${}",
+			"	}"
+		],
+		"description": "Invoked immediately before mounting occurs. It is called before render(), therefore setting state in this method will not trigger a re-rendering. Avoid introducing any side-effects or subscriptions in this method."
 	},
 	"React Lifecycle Hook: Component Will Receive Props": {
 		"prefix": "willReceiveProps",
 		"body": [	
 			"	componentWillReceiveProps() {",
-			"		${// Need to update state based on prop changes? Do that here!}",
+			"		${}",
 			"	}"
 		],
 		"description": "Need to update state based on prop changes? Do that here!"
@@ -180,8 +190,8 @@
 	"React Lifecycle Hook: Component Will Unmount": {
 		"prefix": "willUnmount",
 		"body": [	
-			"	componentWillReceiveProps() {",
-			"		${// Need to update state based on prop changes? Do that here!}",
+			"	componentWillUnmount() {",
+			"		${}",
 			"	}"
 		],
 		"description": "Need to clean something up before this component is destroyed? Goes here."
