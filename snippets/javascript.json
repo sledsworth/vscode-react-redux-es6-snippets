@@ -1,7 +1,7 @@
 {
-	"Redux Action Definition": {
+	"Redux Action Type Definition": {
 		"prefix": "reduxActionExport",
-		"body": "export const ${actionType} = \"${actionType}\""
+		"body": "export const ${actionType} = '${actionType}'"
 	},
 	"ES6 React Import": {
 		"prefix": "reactImport",
@@ -12,7 +12,7 @@
 		"body": "import ${defaultImport} { ${namedImport} } from '${pathToImport}';"
 	},
 	"ES6 Default Import": {
-		"prefix": "import",
+		"prefix": "defaultImport",
 		"body": "import ${defaultImport} from '${pathToImport}';"
 	},
 	"ES6 Aliased Import": {
@@ -24,24 +24,24 @@
 		"body": [
 			"import React, { PropTypes } from 'react';",
 			"",
-			"const ${ComponentName} = ({${props}}) => {",
+			"const ${1:ComponentName} = ({${2:props}}) => {",
 			"",
 			"	return (",
 			"		<div>",
-			"			$1",
+			"			$3",
 			"		</div>",
 			"	);",
 			"};",
 			"",
-			"${ComponentName}.defaultProps = {",
-			"	$2",
+			"${1:ComponentName}.defaultProps = {",
+			"	$4",
 			"};",
 			"",
-			"${ComponentName}.propTypes = {",
-			"	$3",
+			"${1:ComponentName}.propTypes = {",
+			"	$5",
 			"};",
 			"",
-			"export default ${ComponentName};",
+			"export default ${1:ComponentName};",
 			""
 		],
 		"description": "React Presentational(dumb) Component Template. Use this if the component does not need to tie into any lifecycle hooks or hold state."
@@ -52,78 +52,13 @@
 			"import React, { PropTypes } from 'react';",
 			"import { connect } from 'react-redux';",
 			"import { bindActionCreators } from 'redux';",
-			"import * as ${actions} from '${pathToActions}';",
+			"import * as ${1:actions} from '${2:pathToActions}';",
 			"",
-			"",
-			"class ${ComponentName} extends React.Component {",
-			"	${constructor(props, context) {",
+			"class ${3:ComponentName} extends React.Component {",
+			"	constructor(props, context) {",
 			"		super(props, context);",
-			"		$1",
-			"	}}",
-			"",
-			"	${componentDidMount() {",
-			"		$2",
-			"	}}",
-			"",
-			"	${componentWillReceiveProps() {",
-			"		$3",
-			"	}}",
-			"",
-			"	render() {",
-			"		return (",
-			"			$4",
-			"		);",
-			"	}",
-			"}",
-			"",
-			"${ComponentName}.defaultProps = {",
-			"	$5",
-			"};",
-			"",
-			"${ComponentName}.propTypes = {",
-			"	$6",
-			"};",
-			"",
-			"function mapStateToProps(rootState, ownProps) {",
-			"	return {",
-			"		$7",
-			"	};",
-			"}",
-			"",
-			"function mapDispatchToProps(dispatch) {",
-			"	return {",
-			"		actions: bindActionCreators(${actions}, dispatch),",
-			"	};",
-			"}",
-			"",
-			"export default connect(mapStateToProps, mapDispatchToProps)(${ComponentName});",
-			""
-		],
-		"description": "React-Redux Container(Smart) Component Template. Use this if the component is responsible for keeping track of state and you are using redux to store that state."
-	},
-	"React Only Container(smart) Component Template": {
-		"prefix": "smartComponent",
-		"body": [
-			"import React, { PropTypes } from 'react';",
-			"",
-			"",
-			"class ${ComponentName} extends React.Component {",
-			"	${constructor(props, context) {",
-			"		super(props, context);",
-			"		$1",
-			"	}}",
-			"",
-			"	${componentDidMount() {",
-			"		$2",
-			"	}}",
-			"",
-			"	${componentWillReceiveProps() {",
-			"		$3",
-			"	}}",
-			"",
-			"	${componentWillUnmount() {",
 			"		$4",
-			"	}}",
+			"	}",
 			"",
 			"	render() {",
 			"		return (",
@@ -132,31 +67,75 @@
 			"	}",
 			"}",
 			"",
-			"${ComponentName}.defaultProps = {",
+			"${3:ComponentName}.defaultProps = {",
 			"	$6",
 			"};",
 			"",
-			"${ComponentName}.propTypes = {",
+			"${3:ComponentName}.propTypes = {",
 			"	$7",
 			"};",
 			"",
-			"export default ${ComponentName};",
+			"function mapStateToProps(state, ownProps) {",
+			"	return {",
+			"		$8",
+			"	};",
+			"}",
+			"",
+			"function mapDispatchToProps(dispatch) {",
+			"	return {",
+			"		actions: bindActionCreators(${1:actions}, dispatch),",
+			"	};",
+			"}",
+			"",
+			"export default connect(mapStateToProps, mapDispatchToProps)(${3:ComponentName});",
+			""
+		],
+		"description": "React-Redux Container(Smart) Component Template. Use this if the component is responsible for keeping track of state and you are using redux to store that state."
+	},
+	"React Only Container(smart) Component Template": {
+		"prefix": "smartComponent",
+		"body": [
+			"import React, { PropTypes } from 'react';",
+			"$6",
+			"",
+			"class ${1:ComponentName} extends React.Component {",
+			"	constructor(props, context) {",
+			"		super(props, context);",
+			"		$2",
+			"	}",
+			"",
+			"	render() {",
+			"		return (",
+			"			$3",
+			"		);",
+			"	}",
+			"}",
+			"",
+			"${1:ComponentName}.defaultProps = {",
+			"	$4",
+			"};",
+			"",
+			"${1:ComponentName}.propTypes = {",
+			"	$5",
+			"};",
+			"",
+			"export default ${1:ComponentName};",
 			""
 		]
 	},
 	"React Constructor": {
-		"prefix": "constructor",
+		"prefix": "reactConstructor",
 		"body": [	
 			"	constructor(props, context) {",
 			"		super(props, context);",
-			"		${}",
+			"		$1",
 			"	}"
 		]
 	},
 	"React Set Component State": {
 		"prefix": "setState",
 		"body": [	
-			"this.setState(${});"
+			"this.setState($1);"
 		],
 		"description": "Performs a shallow merge of nextState into current state. This is the primary method you use to trigger UI updates from event handlers and server request callbacks."
 	},
@@ -164,7 +143,7 @@
 		"prefix": "didMount",
 		"body": [	
 			"	componentDidMount() {",
-			"		${}",
+			"		$1",
 			"	}"
 		],
 		"description": "Requires DOM nodes? Async network calls? Those go here."
@@ -173,7 +152,7 @@
 		"prefix": "willMount",
 		"body": [	
 			"	componentWillMount() {",
-			"		${}",
+			"		$1",
 			"	}"
 		],
 		"description": "Invoked immediately before mounting occurs. It is called before render(), therefore setting state in this method will not trigger a re-rendering. Avoid introducing any side-effects or subscriptions in this method."
@@ -182,7 +161,7 @@
 		"prefix": "willReceiveProps",
 		"body": [	
 			"	componentWillReceiveProps() {",
-			"		${}",
+			"		$1",
 			"	}"
 		],
 		"description": "Need to update state based on prop changes? Do that here!"
@@ -191,10 +170,40 @@
 		"prefix": "willUnmount",
 		"body": [	
 			"	componentWillUnmount() {",
-			"		${}",
+			"		$1",
 			"	}"
 		],
 		"description": "Need to clean something up before this component is destroyed? Goes here."
+	},
+	"Redux Reducer Template": {
+		"prefix": "reducer",
+		"body": [	
+			"import * as types from '${1:pathToActionTypes}';",
+			"",
+			"const ${2:reducerName}InitialState = {$3};",
+			"",
+			"const ${2:reducerName} = (state = ${2:reducerName}InitialState, action) => {",
+			"	switch (action.type) {",
+			"		case types.${3:actionType}:",
+			"			return state;",
+			"		default:",
+			"			return state;",
+			"	}",
+			"}",
+			"",
+			"default export ${2:reducerName};",
+			""
+		],
+		"description": "Redux reducer template"
+	},
+	"Redux Action Template": {
+		"prefix": "reduxAction",
+		"body": [	
+			"export const ${1:actionName} = ($2) => {",
+			"	return { type: actionTypes.${3:actionType} };",
+			"};",
+			""
+		],
+		"description": "Redux action template"
 	}
-
 }
