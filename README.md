@@ -1,6 +1,6 @@
 # React and Redux ES6 Snippets
 
-This extension for Visual Studio Code adds snippets for React and Redux using ES6 for JavaScript.
+This extension for Visual Studio Code adds snippets for React and Redux using ES6 for JavaScript. Works for both `.js` and `.jsx` file types.
 
 ## Usage
 Type part of a snippet, press `enter`, and the snippet unfolds.

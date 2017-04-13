@@ -1,22 +1,22 @@
 {
 	"Redux Action Definition": {
-		"prefix": "ra",
+		"prefix": "action",
 		"body": "export const ${action type} = \"${action type}\""
 	},
 	"ES6 React Import": {
-		"prefix": "rimp",
+		"prefix": "reactImport",
 		"body": "import React, { PropTypes} from 'react';"
 	},
 	"ES6 Named Import": {
-		"prefix": "nimp",
+		"prefix": "nameImport",
 		"body": "import ${default export} { ${named import} } from '${import path}';"
 	},
 	"ES6 Import": {
-		"prefix": "imp",
+		"prefix": "import",
 		"body": "import ${1:* as ${2:name}} from '${3:import path}';"
 	},
-	"React Presentational Component Template": {
-		"prefix": "rpc",
+	"React Presentational(dumb) Component Template": {
+		"prefix": "dumbComponent",
 		"body": [
 			"import React, { PropTypes } from 'react';",
 			"",
@@ -41,8 +41,8 @@
 		],
 		"description": "React Presentational Component Template"
 	},
-	"React-Redux Container Component Template": {
-		"prefix": "rrcc",
+	"React-Redux Container(smart) Component Template": {
+		"prefix": "reduxComponent",
 		"body": [
 			"import React, { PropTypes } from 'react';",
 			"import { connect } from 'react-redux';",
@@ -103,8 +103,8 @@
 		],
 		"description": "React-Redux Container(Smart) Component Template"
 	},
-	"React Only Container Component Template": {
-		"prefix": "rcc",
+	"React Only Container(smart) Component Template": {
+		"prefix": "smartComponent",
 		"body": [
 			"import React, { PropTypes } from 'react';",
 			"",
@@ -150,7 +150,7 @@
 		]
 	},
 	"React Constructor": {
-		"prefix": "rcr",
+		"prefix": "construct",
 		"body": [	
 			"	${constructor(props, context) {",
 			"		super(props, context);",
@@ -160,7 +160,7 @@
 		]
 	},
 	"React Lifecycle Hook: Component Did Mount": {
-		"prefix": "rcm",
+		"prefix": "didMount",
 		"body": [	
 			"	componentDidMount() {",
 			"		${// Requires DOM nodes? Async network calls? Those go here.}",
@@ -169,7 +169,7 @@
 		"description": "Requires DOM nodes? Async network calls? Those go here."
 	},
 	"React Lifecycle Hook: Component Will Receive Props": {
-		"prefix": "rcp",
+		"prefix": "willReceiveProps",
 		"body": [	
 			"	componentWillReceiveProps() {",
 			"		${// Need to update state based on prop changes? Do that here!}",
@@ -178,7 +178,7 @@
 		"description": "Need to update state based on prop changes? Do that here!"
 	},
 	"React Lifecycle Hook: Component Will Unmount": {
-		"prefix": "rcu",
+		"prefix": "willUnmount",
 		"body": [	
 			"	componentWillReceiveProps() {",
 			"		${// Need to update state based on prop changes? Do that here!}",
