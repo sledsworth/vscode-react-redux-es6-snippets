@@ -16,5 +16,5 @@
 - renamed snippet prefixes to be more memorable
 - fixed various tab stop issues
 
-## Version 0.2.1
+## Version 0.3.0
 - removed the indentation before lifecycle functions

@@ -4,19 +4,23 @@
     "displayName": "React Redux ES6 Snippets",
     "description": "React and Redux snippets to assist with boilerplate and structuring of components, written with ES6.",
     "icon": "images/icon.svg",
-	"galleryBanner": {
-		"color": "#2d2d2d",
-		"theme": "dark"
-	},
+    "galleryBanner": {
+        "color": "#2d2d2d",
+        "theme": "dark"
+    },
     "license": "SEE LICENSE IN LICENSE.md",
     "homepage": "https://github.com/sledsworth/vscode-react-redux-es6-snippets/blob/master/README.md",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/sledsworth/vscode-react-redux-es6-snippets.git"
-	},
-    "version": "0.2.1",
-    "engines": { "vscode": "0.10.x" },
-    "categories": ["Snippets"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sledsworth/vscode-react-redux-es6-snippets.git"
+    },
+    "version": "0.3.0",
+    "engines": {
+        "vscode": "0.10.x"
+    },
+    "categories": [
+        "Snippets"
+    ],
     "contributes": {
         "snippets": [
             {
