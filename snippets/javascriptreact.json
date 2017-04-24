@@ -142,36 +142,36 @@
 	"React Lifecycle Hook: Component Did Mount": {
 		"prefix": "didMount",
 		"body": [	
-			"	componentDidMount() {",
-			"		$1",
-			"	}"
+			"componentDidMount() {",
+			"	$1",
+			"}"
 		],
 		"description": "Requires DOM nodes? Async network calls? Those go here."
 	},
 	"React Lifecycle Hook: Component Will Mount": {
 		"prefix": "willMount",
 		"body": [	
-			"	componentWillMount() {",
-			"		$1",
-			"	}"
+			"componentWillMount() {",
+			"	$1",
+			"}"
 		],
 		"description": "Invoked immediately before mounting occurs. It is called before render(), therefore setting state in this method will not trigger a re-rendering. Avoid introducing any side-effects or subscriptions in this method."
 	},
 	"React Lifecycle Hook: Component Will Receive Props": {
 		"prefix": "willReceiveProps",
 		"body": [	
-			"	componentWillReceiveProps() {",
-			"		$1",
-			"	}"
+			"componentWillReceiveProps() {",
+			"	$1",
+			"}"
 		],
 		"description": "Need to update state based on prop changes? Do that here!"
 	},
 	"React Lifecycle Hook: Component Will Unmount": {
 		"prefix": "willUnmount",
 		"body": [	
-			"	componentWillUnmount() {",
-			"		$1",
-			"	}"
+			"componentWillUnmount() {",
+			"	$1",
+			"}"
 		],
 		"description": "Need to clean something up before this component is destroyed? Goes here."
 	},

@@ -15,3 +15,6 @@
 - updated descriptions to contain more information about the component/function
 - renamed snippet prefixes to be more memorable
 - fixed various tab stop issues
+
+## Version 0.2.1
+- removed the indentation before lifecycle functions

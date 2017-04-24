@@ -6,23 +6,23 @@ This extension for Visual Studio Code adds snippets for React and Redux using ES
 Type part of a snippet, press `enter`, and the snippet unfolds. Camel Cased identifiers allows for abbreviations.
 For example: `rae` will match `reduxActionExport`.
 
-| Shortcut Identifier | | Description                                             |
-|---------:|-- |:---------------------------------------------------------|
-| **defaultImport**|→  | ES6 Default Import                        |
-| **aliasedImport**|→  | ES6 Import with Alias                          |
-| **namedImport**|→ | ES6 Named Import                                        |
-| **reactImport**|→ | ES6 React and PropTypes Import    
-| **dumbComponent**|→  | React Presentational(Dumb) Component Template           |
-| **smartComponent**|→  | React Only Container(Smart) Component Template          |
-| **reactConstructor**|→  | React Contructor								         |
-| **setState**|→  | React Set Component State								         |
-| **willMount**|→  | React Lifecycle Hook: Component Will Mount		         |							
-| **didMount**|→  | React Lifecycle Hook: Component Did Mount		         |							
-| **willReceiveProps**|→  | React Lifecycle Hook:  Component Will Receive Props	 |							
-| **willUnmount**|→  | React Lifecycle Hook: Component Did Unmount		     |							
-| **reduxComponent**|→ | React-Redux Container(Smart) Component Template         |
-| **reduxActionExport**|→ | Redux Action Export                                    |
-| **reduxAction**|→ | Redux Action Template                                    |
+| Shortcut Identifier     |---| Description                                              |
+|------------------------:|---|:---------------------------------------------------------|
+| **defaultImport**       | → | ES6 Default Import                                       |
+| **aliasedImport**       | → | ES6 Import with Alias                                    |
+| **namedImport**         | → | ES6 Named Import                                         |
+| **reactImport**         | → | ES6 React and PropTypes Import                           |
+| **dumbComponent**       | → | React Presentational(Dumb) Component Template            |
+| **smartComponent**      | → | React Only Container(Smart) Component Template           |
+| **reactConstructor**    | → | React Contructor								         |
+| **setState**            | → | React Set Component State								 |
+| **willMount**           | → | React Lifecycle Hook: Component Will Mount		         |							
+| **didMount**            | → | React Lifecycle Hook: Component Did Mount		         |							
+| **willReceiveProps**    | → | React Lifecycle Hook:  Component Will Receive Props	     |							
+| **willUnmount**         | → | React Lifecycle Hook: Component Did Unmount		         |							
+| **reduxComponent**      | → | React-Redux Container(Smart) Component Template          |
+| **reduxActionExport**   | → | Redux Action Export                                      |
+| **reduxAction**         | → | Redux Action Template                                    |
 
 
 Alternatively, press `Ctrl`+`Space` to activate snippets from within the editor.
