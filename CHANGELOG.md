@@ -21,3 +21,6 @@
 
 ## Version 0.3.1
 - fixed an issue where the snippets were unfolding incorrectly because of a change in how VS Code handles tabs.
+
+## Version 0.3.2
+- the reducer snippet was `default export` instead of `export default`... thanks [mathysd](https://github.com/mathysd)
