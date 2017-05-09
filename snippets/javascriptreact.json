@@ -191,7 +191,7 @@
 			"\t}",
 			"}",
 			"",
-			"default export ${2:reducerName};",
+			"export default ${2:reducerName};",
 			""
 		],
 		"description": "Redux reducer template"
