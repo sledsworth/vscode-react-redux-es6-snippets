@@ -20,4 +20,4 @@
 - removed the indentation before lifecycle functions
 
 ## Version 0.3.1
-- fixed an issue where the snippets were unfolding incorrectly because of tabbing.
+- fixed an issue where the snippets were unfolding incorrectly because of a change in how VS Code handles tabs.
