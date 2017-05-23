@@ -5,7 +5,10 @@
 	},
 	"ES6 React Import": {
 		"prefix": "reactImport",
-		"body": "import React, { PropTypes} from 'react';"
+		"body": [
+			"import React from 'react';",
+			"import PropTypes from 'prop-types';"
+		]
 	},
 	"ES6 Named Import": {
 		"prefix": "namedImport",
@@ -22,9 +25,10 @@
 	"React Presentational(dumb) Component Template": {
 		"prefix": "dumbComponent",
 		"body": [
-			"import React, { PropTypes } from 'react';",
+			"import React from 'react';",
+			"import PropTypes from 'prop-types';",
 			"",
-			"const ${1:ComponentName} = ({${2:props}}) => {",
+			"const ${1:ComponentName} = ({ ${2:props} }) => {",
 			"",
 			"\treturn (",
 			"\t\t<div>",
@@ -49,7 +53,8 @@
 	"React-Redux Container(smart) Component Template": {
 		"prefix": "reduxComponent",
 		"body": [
-			"import React, { PropTypes } from 'react';",
+			"import React from 'react';",
+			"import PropTypes from 'prop-types';",
 			"import { connect } from 'react-redux';",
 			"import { bindActionCreators } from 'redux';",
 			"import * as ${1:actions} from '${2:pathToActions}';",
@@ -95,7 +100,8 @@
 	"React Only Container(smart) Component Template": {
 		"prefix": "smartComponent",
 		"body": [
-			"import React, { PropTypes } from 'react';",
+			"import React from 'react';",
+			"import PropTypes from 'prop-types';",
 			"$6",
 			"",
 			"class ${1:ComponentName} extends React.Component {",
