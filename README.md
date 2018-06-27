@@ -5,7 +5,7 @@ This extension for Visual Studio Code adds snippets for React and Redux using ES
 ## Usage
 
 Type part of a snippet, press `enter`, and the snippet unfolds. Camel Cased identifiers allows for abbreviations.
-For example: `rae` will match `reduxActionExport`.
+For example: `cdm` will match `compDidMount`.
 
 |      Shortcut Identifier |     | Description                                        |
 | -----------------------: | --- | :------------------------------------------------- |
