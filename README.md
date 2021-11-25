@@ -1,3 +1,5 @@
+⚠️ **These snippets are way out of date, [the VS Code Marketplace](https://marketplace.visualstudio.com/search?term=react%20redux&target=VSCode&category=Snippets&sortBy=Relevance) has plenty of alternatives that are better maintained.**
+
 # React and Redux ES6 Snippets
 
 This extension for Visual Studio Code adds snippets for React and Redux using ES6 for JavaScript. Supports both `.js` and `.jsx` file extensions.
